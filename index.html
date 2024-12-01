@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>BD3-Atv3</title>
+  </head>
+  <body>
+    <main class="container">
+      <form id="form-student">
+        <strong class="title"> Novo Registro </strong>
+        <div id="form-content">
+          <!-- renderForm in app.js -->
+        </div>
+        <button class="btn" type="submit">Cadastrar</button>
+      </form>
+      <section id="list-student">
+
+      </section>
+    </main>
+  </body>
+  <!-- IMPORT DO SDK DO FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+  <!-- IMPORT DO SDK DO FIRESTORE -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+  <!-- CONEXÃO COM O FIREBASE -->
+  <script>
+    // Dados de conexão com o firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCjRTbDOvid5GFTF-mgLdJr4uNaAfRadR4",
+      authDomain: "bd3-app-libri-mariana.firebaseapp.com",
+      projectId: "bd3-app-libri-mariana",
+      storageBucket: "bd3-app-libri-mariana.firebasestorage.app",
+      messagingSenderId: "651607421102",
+      appId: "1:651607421102:web:0ed4a3e25d10c42fcdfd3f",
+      measurementId: "G-MRC9J0F6GJ",
+    };
+
+    // Inicializa o firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Inicializa o firestore
+    const db = firebase.firestore();
+
+    console.log(db);
+  </script>
+
+  <script src="app.js"></script>
+</html>
